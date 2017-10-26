@@ -1,5 +1,6 @@
-#pragma once
 /*
+[Please do not mistake this as advocating for any specific implementation.  It's intent was
+to facilitate communication and provide examples of alternate approaches.]
 
 Many moons ago, I was a junior programmer and I was told by a senior engineer about how terrible 
 dynamic_cast was; How the sky would rain fire if I ever used it.  So, I never did.  Every place 
