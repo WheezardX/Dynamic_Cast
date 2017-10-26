@@ -1,0 +1,8 @@
+*.ipch
+*.idb
+*.tlog
+*.filters
+*.VC.db
+DynamicCast/Debug/
+DynamicCast/Release/
+DynamicCast/DynamicCast.zip
