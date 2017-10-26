@@ -1,15 +1,17 @@
 #pragma once
 /*
 
-Many moons ago, I was a junior programmer and I was told by a senior engineer about how terrible dynamic_cast was; How 
-the sky would rain fire if I ever used it.  So, I never did.  Every place I've worked since has had a moratorium on its use.  
-I've never had a reason to question it, so when I saw it being used a lot in a recent code base, I was surprised.  Now I had 
-a reason to question that sage old advice, so I ran some tests.
+Many moons ago, I was a junior programmer and I was told by a senior engineer about how terrible 
+dynamic_cast was; How the sky would rain fire if I ever used it.  So, I never did.  Every place 
+I've worked since has had a moratorium on its use.  I've never had a reason to question it, so 
+when I saw it being used a lot in a recent code base, I was surprised.  Now I had a reason to 
+question that sage old advice, so I ran some tests.
 
-Turns out it is "slow".  Tests show it to be 15x to 50x slower than a simple, naive ID system that relies on virtual 
-functions to do a simple cast.  Defining "slow" is important, though.  We're talking about 30-50 nanoseconds per operation 
-(Averaged over 1000 iterations).  Enough that doing it in a tight loops matters but if you are dynamic_casting in a tight 
-loop, there are bigger issues.
+Turns out it is "slow".  Tests show it to be 15x to 50x slower than a simple, naive ID system 
+that relies on virtual functions to do a simple cast.  Defining "slow" is important, though.  
+We're talking about 30-50 nanoseconds per operation (Averaged over 1000 iterations).  Enough that 
+doing it in a tight loops matters but if you are dynamic_casting in a tight loop, there are 
+bigger issues.
 
 This leads me into another thing I've learned over the years but not something anyone ever told me:  When people start 
 talking about "speed" of code I get pretty suspicious.  Call me cynical but I find that sort of talk to be a smoke screen 

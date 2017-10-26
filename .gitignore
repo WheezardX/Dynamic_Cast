@@ -3,6 +3,7 @@
 *.tlog
 *.filters
 *.VC.db
+*.opendb
 DynamicCast/Debug/
 DynamicCast/Release/
 DynamicCast/DynamicCast.zip
